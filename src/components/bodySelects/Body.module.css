@@ -1,0 +1,219 @@
+.contain {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 3rem;
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+    height: auto;
+    width: 100%;
+}
+
+.containSelects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+
+.btnSearch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 11rem;
+    background: linear-gradient(rgb(17, 206, 181), rgb(41, 177, 170));
+    height: 2.2rem;
+    color: white;
+    border-radius: 55px;
+    cursor: pointer;
+}
+
+.btnSearchDisabled {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 11rem;
+    background: linear-gradient(rgb(17, 206, 181), rgb(41, 177, 170));
+    height: 2.2rem;
+    color: white;
+    border-radius: 55px;
+    filter: grayscale(1.2);
+}
+
+.btnSearchDisabled:hover {
+    box-shadow: none;
+}
+
+.containLoading button {
+    width: 11rem;
+    height: 2rem;
+    border-radius: 16px;
+    margin-top: 0.5rem;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 14px;
+    background: linear-gradient(rgb(17, 206, 181), rgb(41, 177, 170));
+    border: none;
+}
+
+.containLoading button img {
+    width: 25px;
+    height: 25px;
+}
+
+.containLoading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.containLoading button img {
+    width: 24px;
+    height: 24px;
+}
+
+.containLoading .containBar {
+    width: 14rem;
+    height: 1.2rem;
+    box-shadow: 0 0 3px 1px #33e7ff;
+    border-radius: 22rem;
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+}
+
+.barShow,
+.barEmpty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    width: 100%;
+    border-radius: 22rem;
+}
+
+.barEmpty li,
+.barShow li {
+    width: 15px;
+    height: 19.2px;
+    list-style: none;
+    border-radius: 1px;
+}
+
+.lineBarComplete {
+    background-color: #1fb2d6;
+    box-shadow: 0 0 1px 1px #1fb2d6;
+}
+.lineBarIncomplete {
+    background-color: rgb(1, 90, 112);
+}
+.containNumberLoading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 14rem;
+    font-size: 14px;
+}
+
+.containLoading span {
+    color: white;
+    font-weight: bold;
+}
+
+.btnClear {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    width: 8rem;
+    cursor: pointer;
+    height: 2rem;
+    background: linear-gradient(rgb(17, 206, 181), rgb(41, 177, 170));
+    border-radius: 25px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    outline: none;
+}
+.btnClear img {
+    width: 25px;
+    height: 25px;
+}
+
+button:hover {
+    box-shadow: 0 0 3px 1px #60dfff;
+}
+
+@media only screen and (max-width: 699px) {
+    .containSelects {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .containLoading button {
+        gap: 0.5rem;
+        margin-top: 0.5rem;
+    }
+
+    .containLoading button img {
+        width: 21px;
+        height: 21px;
+    }
+
+    .containLoading {
+        gap: 0.5rem;
+    }
+
+    .containLoading .containBar {
+        margin-top: 0.5rem;
+    }
+}
+
+@media only screen and (min-width: 700px) and (max-width: 1080px) {
+    .containLoading button {
+        width: 9rem;
+        height: 2rem;
+        border-radius: 16px;
+        color: white;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        font-size: 13px;
+        background: linear-gradient(rgb(17, 206, 181), rgb(41, 177, 170));
+        border: none;
+    }
+
+    .containLoading .containBar {
+        width: 10.5rem;
+        margin-top: 0.5rem;
+    }
+
+    .barShow,
+    .barEmpty {
+        gap: 0.5rem;
+    }
+    .barEmpty li,
+    .barShow li {
+        width: 12px;
+        height: 19.2px;
+        list-style: none;
+        border-radius: 1px;
+    }
+}

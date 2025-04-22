@@ -1,0 +1,201 @@
+.containLists {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    background-color: rgb(49, 50, 58);
+    width: 59rem;
+    color: white;
+    margin-top: 1rem;
+    border-radius: 7px;
+    padding-bottom: 0.5rem;
+    box-shadow: 0 0 3px 1px #60dfff;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    height: 2.6rem;
+    width: 100%;
+    border-bottom: 1px solid white;
+    background-color: rgb(42, 43, 49);
+    font-weight: bold;
+    box-shadow: 0 0 3px 1px #60dfff;
+}
+.containLists ul {
+    color: white;
+    width: 50%;
+    padding-left: 0%;
+}
+
+.containLists .ulImagesNotFound {
+    border-right: 2px solid rgb(150, 150, 150);
+}
+
+.containLists .scroll {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    width: 100%;
+    gap: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    height: 19rem;
+    border-radius: 5px;
+}
+.containLists img {
+    width: 28px;
+    height: 28px;
+}
+
+.containLists li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+    gap: 1rem;
+    width: 85%;
+    padding: 0.5rem;
+    padding-left: 2rem;
+    background-color: rgb(59, 60, 68);
+    border-bottom: 1px solid white;
+    box-shadow: 0 0 3px 1px #60dfff;
+}
+
+.containLists li img {
+    width: 21px;
+    height: 21px;
+    margin-right: 1rem;
+}
+
+.containLists .rowOne {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.containLists .rowOne img {
+    width: 28px;
+    height: 28px;
+    margin-right: 0;
+}
+
+.notFoundImages {
+    height: 99%;
+    width: 99%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    gap: 0;
+    color: white;
+}
+.notFoundImages h4 {
+    margin-top: 0.5rem;
+    opacity: 75%;
+}
+
+.notFoundImages img {
+    height: 75px;
+    width: 75px;
+    opacity: 65%;
+}
+
+@media only screen and (max-width: 699px) {
+    .containLists {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        width: 95%;
+    }
+
+    .containLists ul {
+        color: white;
+        width: 100%;
+        padding-left: 0%;
+    }
+
+    .containLists img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .notFoundImages {
+        font-size: 15px;
+    }
+
+    .notFoundImages img {
+        height: 65px;
+        width: 65px;
+    }
+}
+
+@media only screen and (min-width: 700px) and (max-width: 1080px) {
+    .containLists {
+        width: 85%;
+    }
+
+
+    .containLists .scroll {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow-x: hidden;
+        width: 100%;
+        gap: 1rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        height: 12rem;
+        border-radius: 5px;
+    }
+    .containLists img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .containLists li img {
+        width: 21px;
+        height: 21px;
+        margin-right: 1rem;
+    }
+
+    .containLists .rowOne {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .containLists .rowOne img {
+        width: 28px;
+        height: 28px;
+        margin-right: 0;
+    }
+
+    .notFoundImages {
+        height: 99%;
+        width: 99%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+        gap: 0;
+        color: white;
+    }
+    .notFoundImages h4 {
+        margin-top: 0.5rem;
+        opacity: 75%;
+    }
+
+    .notFoundImages img {
+        height: 65px;
+        width: 65px;
+        opacity: 65%;
+    }
+}

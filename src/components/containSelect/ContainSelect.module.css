@@ -1,0 +1,146 @@
+.containSelect {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 1rem;
+    border-radius: 5px;
+    width: 23rem;
+    height: 15rem;
+    background-color: rgb(49, 50, 58);
+    box-shadow: 0 0 5px 1px #60dfff;
+}
+
+.containSelect input {
+    display: none;
+}
+.containSelect img {
+    width: 87px;
+    height: 87px;
+    margin-top: 1rem;
+    opacity: 28%;
+}
+.containSelect .iconUpload {
+    width: 22px;
+    height: 22px;
+    opacity: 99%;
+    margin-top: 0;
+}
+
+.containSelect .label {
+    cursor: pointer;
+}
+
+.containSelect .button {
+    height: 2.2rem;
+    width: 16rem;
+    background: linear-gradient(rgb(17, 206, 181), rgb(41, 177, 170));
+    color: white;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    outline: none;
+}
+
+.containSelect .button:hover {
+    box-shadow: 0 0 4px 1px #60dfff;
+}
+
+.containSelect .uploaded {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+.containSelect .uploaded img {
+    width: 37px;
+    height: 37px;
+    margin-top: 0;
+    opacity: 99%;
+}
+
+@media only screen and (max-width: 699px) {
+    .containSelect {
+        width: 19rem;
+        height: 15rem;
+    }
+
+    .containSelect img {
+        width: 67px;
+        height: 67px;
+    }
+    .containSelect .iconUpload {
+        width: 17px;
+        height: 17px;
+    }
+
+    .containSelect .button {
+        height: 2.2rem;
+        width: 14rem;
+    }
+
+    .containSelect .uploaded {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        margin-top: 1rem;
+        gap: 1rem;
+    }
+
+    .containSelect .uploaded img {
+        width: 34px;
+        height: 34px;
+    }
+}
+
+@media only screen and (min-width: 700px) and (max-width: 1080px) {
+    .containSelect {
+        width: 11rem;
+        height: 11rem;
+    }
+
+    .containSelect img {
+        width: 37px;
+        height: 37px;
+        margin-top: 1rem;
+        opacity: 28%;
+    }
+    .containSelect .iconUpload {
+        width: 15px;
+        height: 15px;
+    }
+
+    .containSelect .button {
+        height: 1.8rem;
+        width: 8rem;
+        font-size: 12px;
+        gap:0.5rem;
+    }
+
+
+
+    .containSelect .uploaded {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        margin-top: 0.5rem;
+        gap: 1rem;
+        font-size: 13px;
+    }
+
+    .containSelect .uploaded img {
+        width: 27px;
+        height: 27px;
+        margin-top: 0;
+        opacity: 99%;
+    }
+}
