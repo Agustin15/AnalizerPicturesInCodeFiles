@@ -1,1 +1,1 @@
-#seekerEyeOfPictures (/src/assets/images/iconSearching.png)
+# seekerEyeOfPictures (/src/assets/images/iconSearching.png)
