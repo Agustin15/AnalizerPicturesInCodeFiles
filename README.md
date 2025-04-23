@@ -1,10 +1,10 @@
-# seekerEyeOfPictures <img src="/src/assets/images/iconSearching.png" width="35px">
+## seekerEyeOfPictures <img src="/src/assets/images/iconSearching.png" width="35px">
 
  >## Installation ⚙
    #### Requirements 📝
-    -Install Node.js and npm
+   -Install Node.js and npm
    
-    -Install React.js
+   -Install React.js
    #### Clone repository
        git clone https://github.com/Agustin15/seekerEyeOfPictures.git
    
