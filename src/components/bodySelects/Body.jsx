@@ -11,6 +11,8 @@ import { Header } from "../header/Header";
 import { ContainSelect } from "../containSelect/ContainSelect";
 import { ListImages } from "../listImages/ListImages";
 import { useScanner } from "../../contexts/ScannerContext";
+import { ListImagesProvider } from "../../contexts/ListsImagesContext";
+
 import { useEffect, useState } from "react";
 export const Body = () => {
   const {
@@ -28,7 +30,6 @@ export const Body = () => {
   const [btnScannState, setBtnScannState] = useState(false);
 
   useEffect(() => {
-  
     if (uploadedFiles.length > 0 && uploadedImages.length > 0) {
       setBtnScannState(true);
     } else {
@@ -41,6 +42,12 @@ export const Body = () => {
       setBtnScannState(false);
     }
   }, [scanFinished]);
+
+  useEffect(() => {
+    if (scanStop) {
+      setBtnScannState(false);
+    }
+  }, [scanStop]);
 
   const displayLinesBar = () => {
     let lineasBar = [];
@@ -91,12 +98,13 @@ export const Body = () => {
               </div>
             </div>
             <span>
-              {numberLoading < 100 && !scanStop
-                ? numberLoading + "%"
+              {numberLoading > 0 && numberLoading < 100 && !scanStop
+                ? "loading " + numberLoading + "%"
                 : numberLoading == 100
-                ? "search finished"
+                ? "search finished " + numberLoading + "%"
+                : scanStop
+                ? "search canceled " + numberLoading + "%"
                 : ""}
-              {scanStop ? "search cancel" : ""}
             </span>
 
             <button
@@ -104,7 +112,8 @@ export const Body = () => {
               disabled={
                 uploadedFiles.length == 0 ||
                 uploadedImages.length == 0 ||
-                scanFinished
+                scanFinished ||
+                scanStop
                   ? true
                   : false
               }
@@ -116,7 +125,7 @@ export const Body = () => {
               onClick={handleScanner}
             >
               <img src={loader ? iconStop : iconScanner}></img>
-              {loader ? "Stop search" : "Start search"}
+              {loader ? "Cancel search" : "Start search"}
             </button>
           </div>
 
@@ -136,7 +145,10 @@ export const Body = () => {
         ) : (
           ""
         )}
-        <ListImages />
+
+        <ListImagesProvider>
+          <ListImages />
+        </ListImagesProvider>
       </div>
     </>
   );

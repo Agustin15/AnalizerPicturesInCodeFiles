@@ -11,9 +11,9 @@
     box-shadow: 0 0 3px 1px #60dfff;
 }
 
-.title {
+.containTitle {
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     gap: 1rem;
     height: 2.6rem;
@@ -23,6 +23,27 @@
     font-weight: bold;
     box-shadow: 0 0 3px 1px #60dfff;
 }
+
+.title {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.containTitle .toolbarShow {
+    width: 19px;
+    height: 19px;
+    margin-left: 0.5rem;
+    position: absolute;
+    cursor: pointer;
+}
+
+.containTitle .toolbarHide {
+    display: none;
+}
+
 .containLists ul {
     color: white;
     width: 50%;
@@ -105,6 +126,35 @@
     opacity: 65%;
 }
 
+.containSearchShow {
+    display: flex;
+    margin-top: 0.5rem;
+    margin-left: 0;
+    position: absolute;
+    margin-top: -0.5rem;
+    margin-left: 0.5rem;
+}
+.containSearchHide {
+    display: none;
+}
+
+.containSearchShow input {
+    width: 15rem;
+    height: 2.2rem;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    outline: none;
+    font-weight: bold;
+    background-color: rgb(59, 60, 68);
+    padding-left: 1rem;
+    box-shadow: 0 0 2px 1px #60dfff;
+}
+
+.containSearchShow input:hover {
+    box-shadow: 0 0 3px 1px #60dfff;
+}
+
 @media only screen and (max-width: 699px) {
     .containLists {
         display: flex;
@@ -137,9 +187,8 @@
 
 @media only screen and (min-width: 700px) and (max-width: 1080px) {
     .containLists {
-        width: 85%;
+        width: 82%;
     }
-
 
     .containLists .scroll {
         display: flex;
@@ -158,9 +207,14 @@
         height: 28px;
     }
 
+    .containLists li {
+        font-size: 13px;
+        width: 75%;
+        padding: 0.5rem;
+    }
     .containLists li img {
-        width: 21px;
-        height: 21px;
+        width: 17px;
+        height: 17px;
         margin-right: 1rem;
     }
 
@@ -172,8 +226,8 @@
     }
 
     .containLists .rowOne img {
-        width: 28px;
-        height: 28px;
+        width: 24px;
+        height: 24px;
         margin-right: 0;
     }
 
@@ -198,4 +252,24 @@
         width: 65px;
         opacity: 65%;
     }
+    .title {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        font-size: 13px;
+    }
+
+    .title img {
+        width: 22px;
+        height: 22px;
+       
+    }
+    .containTitle .toolbarShow {
+        width: 16px;
+        height: 16px;
+ 
+    }
+
 }

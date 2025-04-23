@@ -31,7 +31,7 @@ export const ScannerProvider = ({ children }) => {
       setLoader(true);
       scann(namesImages, contentsFiles);
     } else {
-      setLoader(true);
+      setLoader(false);
       setScanStop(true);
     }
   };
@@ -39,6 +39,7 @@ export const ScannerProvider = ({ children }) => {
   useEffect(() => {
     if (numberLoading == 100) {
       setLoader(false);
+      setScanFinsihed(true);
     }
     setNumberBarLoading(Math.ceil((numberLoading * 8) / 100));
   }, [numberLoading]);
@@ -51,6 +52,7 @@ export const ScannerProvider = ({ children }) => {
       setNumberLoading(Math.ceil(percentaje));
     }
   }, [imagesInFiles, imagesNotInFiles]);
+
 
   const readContentFile = async (file) => {
     return new Promise((resolve) => {
@@ -70,15 +72,26 @@ export const ScannerProvider = ({ children }) => {
     });
   };
 
+  const getBtnState = async () => {
+    return new Promise((resolve) => {
+      setTimeout(function () {
+        resolve(document.getElementById("btnScann").textContent);
+      }, 1000);
+    });
+  };
+
   const scann = async (namesImages, contentsFiles) => {
     let index = 0;
     for (const nameImage of namesImages) {
       index++;
       let quantityImageNotFound = 0;
 
-      if (scanStop) {
+      let btnState = await getBtnState();
+
+      if (btnState == "Start search") {
         break;
       }
+
       for (const contentFile of contentsFiles) {
         if (contentFile.contentFile.indexOf(nameImage) > -1) {
           if (!imagesInFiles.find((image) => image == nameImage)) {
@@ -98,12 +111,13 @@ export const ScannerProvider = ({ children }) => {
           nameImage
         ]);
       }
-
-      if (index == namesImages.length - 1) setScanFinsihed(true);
     }
   };
 
   const clear = () => {
+    document.querySelectorAll("input").forEach((input) => {
+      input.value = "";
+    });
     setLoader(false);
     setImagesInFiles([]);
     setImagesNotInFiles([]);
@@ -111,9 +125,7 @@ export const ScannerProvider = ({ children }) => {
     setUploadedImages([]);
     setNumberLoading(0);
     setScanFinsihed(false);
-    document.querySelectorAll("input").forEach((input) => {
-      input.value = "";
-    });
+    setScanStop(false);
   };
 
   return (

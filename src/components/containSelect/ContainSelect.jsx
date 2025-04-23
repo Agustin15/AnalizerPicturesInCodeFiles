@@ -29,7 +29,6 @@ export const ContainSelect = ({ icon, textButton, id, idIconUploaded }) => {
   );
 
   const handleInputFile = (event) => {
-    console.log(event);
     let inputFile = event.target;
 
     if (inputFile.files.length > 0) {
