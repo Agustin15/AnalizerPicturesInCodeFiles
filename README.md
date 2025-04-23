@@ -1,1 +1,1 @@
-# seekerEyeOfPictures (seekerEyeOfPictures/src/assets/images/iconSearching.png)
+# seekerEyeOfPictures ![Tux, the Linux mascot](seekerEyeOfPictures/src/assets/images/iconSearching.png)
