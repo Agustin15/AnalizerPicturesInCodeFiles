@@ -1,1 +1,1 @@
-# seekerEyeOfPictures ![ddd](/src/assets/images/iconSearching.png | width=45)
+# seekerEyeOfPictures <img src="/src/assets/images/iconSearching.png>
