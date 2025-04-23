@@ -1,4 +1,4 @@
-## seekerEyeOfPictures <img src="/src/assets/images/iconSearching.png" width="35px">
+## seekerEyeOfPictures <img src="/src/assets/images/iconSearching.png" width="32px">
 
  >## Installation ⚙
    #### Requirements 📝
@@ -12,7 +12,7 @@
        npm install
 
  >## Init app ⚙
-    #### Navigate to branch proyect and start 
+   #### Navigate to branch proyect and start 
    
      //Using Create React App
      npm start
