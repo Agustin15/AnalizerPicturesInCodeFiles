@@ -5,7 +5,7 @@ export const Header = () => {
   return (
     
     <header className={styleHeader.header}>
-      <h3>Search images in code</h3>
+      <h3>Search images in code files</h3>
       <img src={icon}></img>
     </header>
   );
