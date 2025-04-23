@@ -1,4 +1,4 @@
-# seekerEyeOfPictures <img src="/src/assets/images/iconSearching.png" width="55px">
+# seekerEyeOfPictures <img src="/src/assets/images/iconSearching.png" width="35px">
 
  >## Installation ⚙
   #### Requirements 📝
