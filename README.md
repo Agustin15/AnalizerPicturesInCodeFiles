@@ -1,1 +1,3 @@
-# seekerEyeOfPictures <img src="/src/assets/images/iconSearching.png>
+# seekerEyeOfPictures [[ /src/assets/images/iconSearching.png | altura = 100px ]]
+
+
