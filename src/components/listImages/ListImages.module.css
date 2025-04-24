@@ -1,6 +1,6 @@
 .containLists {
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: start;
     background-color: rgb(49, 50, 58);
     width: 59rem;
@@ -48,6 +48,10 @@
     color: white;
     width: 50%;
     padding-left: 0%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .containLists .ulImagesNotFound {
@@ -128,18 +132,30 @@
 
 .containSearchShow {
     display: flex;
-    margin-top: 0.5rem;
-    margin-left: 0;
-    position: absolute;
-    margin-top: -0.5rem;
-    margin-left: 0.5rem;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-top: 0.7rem;
 }
 .containSearchHide {
     display: none;
 }
 
+.containSearchShow img {
+    position: absolute;
+    margin-left: 13.3rem;
+    top: 0.2rem;
+    width: 12px;
+    height: 12px;
+}
+
+.containSearchShow img {
+    cursor: pointer;
+}
+
+
 .containSearchShow input {
-    width: 15rem;
+    width: 12rem;
     height: 2.2rem;
     border-radius: 5px;
     border: none;
@@ -148,6 +164,7 @@
     font-weight: bold;
     background-color: rgb(59, 60, 68);
     padding-left: 1rem;
+    padding-right: 2rem;
     box-shadow: 0 0 2px 1px #60dfff;
 }
 
@@ -182,6 +199,29 @@
     .notFoundImages img {
         height: 65px;
         width: 65px;
+    }
+
+    .containSearchShow {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .containSearchHide {
+        display: none;
+    }
+
+    .containSearchShow img {
+        position: absolute;
+        margin-left: 13.3rem;
+        top: 0.2rem;
+        width: 14px;
+        height: 14px;
+        cursor: pointer;
+    }
+
+    .containSearchShow input {
+        width: 12rem;
+        height: 2.2rem;
     }
 }
 
@@ -264,12 +304,34 @@
     .title img {
         width: 22px;
         height: 22px;
-       
     }
     .containTitle .toolbarShow {
         width: 16px;
         height: 16px;
- 
     }
 
+    .containSearchShow {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+    .containSearchHide {
+        display: none;
+    }
+
+    .containSearchShow img {
+        position: absolute;
+        margin-left: 13.3rem;
+        top: 0.2rem;
+        width: 14px;
+        height: 14px;
+        cursor: pointer;
+    }
+
+    .containSearchShow input {
+        width: 12rem;
+        height: 2.2rem;
+        font-size: 12px;
+    }
 }

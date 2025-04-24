@@ -1,11 +1,14 @@
 import iconToolbar from "../assets/images/menu.png";
 import iconMenuOpen from "../assets/images/menuOpen.png";
+import iconMenu from "../assets/images/menu.png";
 
 import { createContext, useContext, useEffect, useRef, useState } from "react";
 
 const ListImagesContext = createContext();
 
 export const ListImagesProvider = ({ children }) => {
+  const [showMenuOne, setShowMenuOne] = useState(false);
+  const [showMenuTwo, setShowMenuTwo] = useState(false);
   const [showSearcherOne, setShowSearcherOne] = useState(false);
   const [showSearcherTwo, setShowSearcherTwo] = useState(false);
   const [showNotResultsOne, setShowNotResultsOne] = useState(false);
@@ -13,19 +16,29 @@ export const ListImagesProvider = ({ children }) => {
   const refScrollImagesNotFound = useRef();
   const refScrollImagesFound = useRef();
 
+  useEffect(() => {
+    if (showSearcherOne) {
+      document.getElementById("menuListNotFound").src = iconMenu;
+      setShowMenuOne(false);
+    }
+  }, [showSearcherOne]);
+
+  useEffect(() => {
+    if (showSearcherTwo) {
+      document.getElementById("menuListFound").src = iconMenu;
+      setShowMenuTwo(false);
+    }
+  }, [showSearcherTwo]);
+
   const handleMenu = (event, option) => {
     let menuIcon = event.target;
 
     if (menuIcon.src.indexOf(iconToolbar) > -1) {
       menuIcon.src = iconMenuOpen;
-      option == "notFound"
-        ? setShowSearcherOne(true)
-        : setShowSearcherTwo(true);
+      option == "notFound" ? setShowMenuOne(true) : setShowMenuTwo(true);
     } else {
       menuIcon.src = iconToolbar;
-      option == "notFound"
-        ? setShowSearcherOne(false)
-        : setShowSearcherTwo(false);
+      option == "notFound" ? setShowMenuOne(false) : setShowMenuTwo(false);
     }
   };
 
@@ -71,7 +84,11 @@ export const ListImagesProvider = ({ children }) => {
         refScrollImagesFound,
         refScrollImagesNotFound,
         showNotResultsOne,
-        showNotResultsTwo
+        showNotResultsTwo,
+        setShowMenuOne,
+        setShowMenuTwo,
+        showMenuOne,
+        showMenuTwo,
       }}
     >
       {children}

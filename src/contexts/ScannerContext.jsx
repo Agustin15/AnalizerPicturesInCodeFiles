@@ -76,7 +76,7 @@ export const ScannerProvider = ({ children }) => {
     return new Promise((resolve) => {
       setTimeout(function () {
         resolve(document.getElementById("btnScann").textContent);
-      }, 1000);
+      }, 600);
     });
   };
 
