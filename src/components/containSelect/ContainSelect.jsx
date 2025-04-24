@@ -60,7 +60,7 @@ export const ContainSelect = ({ icon, textButton, id, idIconUploaded }) => {
         type="file"
         accept={
           id == "loadFiles"
-            ? ".txt,.css,.js,.jsx,.jsx.,.html,.php,.py,.cs,.jar"
+            ? ".txt,.css,.js,.ts,.jsx.,.html,.xml,.php,.py,.cs,.java,.c,.pas,.vb,.lua,.rb,.pl,.pm,.cpp,.go,.sh"
             : "image/*"
         }
         multiple
