@@ -12,8 +12,8 @@
        npm install
 
    #### Dependences used 
-     - [JSZip](https://stuk.github.io/jszip/) 
-     - [FileSaver.js](https://github.com/eligrey/FileSaver.js) 
+   - [JSZip](https://stuk.github.io/jszip/) 
+   - [FileSaver.js](https://github.com/eligrey/FileSaver.js) 
 
  >## Init app ⚙
    #### Navigate to branch proyect and start 
